@@ -2,14 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChecklistComponent } from './checklist.component';
 
-
-
 @NgModule({
-  declarations: [
-    ChecklistComponent
-  ],
-  imports: [
-    CommonModule
-  ]
+    imports: [CommonModule],
+    exports: [ChecklistComponent],
+    bootstrap: [ChecklistComponent],
+    declarations: [ChecklistComponent]
 })
-export class ChecklistModule { }
+export class ChecklistModule {
+}

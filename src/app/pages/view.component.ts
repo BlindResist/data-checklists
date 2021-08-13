@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'checklists',
+    selector: 'view',
     template: `
         <section class="page">
             <h1>Check lists!</h1>
@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
         </section>
     `
 })
-export class ChecklistsComponent {
+export class ViewComponent {
 }
