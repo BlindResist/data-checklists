@@ -1,0 +1,16 @@
+@import 'common.scss';
+
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    flex: 1 0 auto;
+    background-color: $white;
+    overflow: hidden;
+}
