@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ViewComponent } from '@/app/pages/view.component';
+import { ChecklistComponent } from '@/app/checklist/checklist.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: ViewComponent
+        component: ChecklistComponent
     }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

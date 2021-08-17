@@ -1,11 +1,13 @@
-export interface ChecklistView {
+export interface IChecklistView {
     id: number,
     name: string,
-    details: string
+    details: string,
+    selected: boolean
 }
 
-export interface ChecklistData {
+export interface IChecklistData {
     id: number,
     name: string,
-    items: ChecklistView[]
+    selected: boolean,
+    items: IChecklistView[]
 }
