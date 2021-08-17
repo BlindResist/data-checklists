@@ -1,1 +1,7 @@
-<p>view works!</p>
+<div class="view">
+    <app-view-item
+        [name]="item.name"
+        [details]="item.details"
+        *ngFor="let item of selectedItem"
+    ></app-view-item>
+</div>

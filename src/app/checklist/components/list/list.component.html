@@ -1,1 +1,8 @@
-<p>list works!</p>
+<div class="list">
+    <app-list-item
+        [data]="item"
+        [index]="index + 1"
+        (onClick)="openItem($event)"
+        *ngFor="let item of data; let index = index"
+    ></app-list-item>
+</div>

@@ -1,0 +1,31 @@
+@import 'common';
+
+.list-item {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    padding: 1rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__index {
+        display: block;
+        width: 2rem;
+        height: 1rem;
+        padding: .25rem .5rem;
+        margin-right: 1rem;
+        text-align: center;
+        color: $white;
+        font-size: .75rem;
+        font-weight: 700;
+        line-height: 1rem;
+        border-radius: 4px;
+        background-color: rgba($black, .25);
+    }
+
+    &--active {
+        background-color: rgba($black, .1);
+    }
+}

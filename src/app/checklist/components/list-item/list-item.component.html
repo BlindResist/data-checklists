@@ -1,1 +1,8 @@
-<p>list-item works!</p>
+<div
+    class="list-item"
+    (click)="clickHandler()"
+    [ngClass]="{'list-item--active': data.selected}"
+>
+    <span class="list-item__index">{{ index }}</span>
+    <span class="list-item__name">{{ data.name }}</span>
+</div>

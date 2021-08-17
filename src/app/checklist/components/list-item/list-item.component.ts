@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { IChecklistData } from "@/app/checklist/models/checklist.model";
 
 @Component({
-  selector: 'app-list-item',
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss']
+    selector: 'app-list-item',
+    templateUrl: './list-item.component.html',
+    styleUrls: ['./list-item.component.scss']
 })
-export class ListItemComponent implements OnInit {
+export class ListItemComponent {
+    @Input() public index!: number
+    @Input() public data!: IChecklistData
 
-  constructor() { }
+    @Output() onClick = new EventEmitter()
 
-  ngOnInit(): void {
-  }
-
+    clickHandler(): void {
+        this.onClick.emit(this.data)
+    }
 }

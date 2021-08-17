@@ -1,0 +1,15 @@
+<div class="view-item">
+    <div
+        (click)="toggleBody()"
+        class="view-item__header"
+    >
+        <span class="view-item__caption">{{ name }}</span>
+        <app-button>show details</app-button>
+    </div>
+    <div
+        *ngIf="bodyVisible"
+        class="view-item__body"
+    >
+        <span>{{ details }}</span>
+    </div>
+</div>
