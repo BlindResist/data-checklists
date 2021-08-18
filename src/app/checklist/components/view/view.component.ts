@@ -10,6 +10,10 @@ export class ViewComponent {
     @Input() data!: IChecklistData[]
 
     get selectedItem(): IChecklistView[] {
-        return this.data.filter(item => item.selected)[0].items
+        return this.filteredData.length ? this.filteredData[0].items : []
+    }
+
+    get filteredData(): IChecklistData[] | [] {
+        return this.data.filter((item: IChecklistData) => item.selected)
     }
 }
