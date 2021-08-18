@@ -8,6 +8,7 @@ import { ButtonComponent } from '@/app/components/button/button.component';
 import { ListItemComponent } from './components/list-item/list-item.component';
 import { ViewItemComponent } from './components/view-item/view-item.component';
 import { CheckboxComponent } from '@/app/components/checkbox/checkbox.component';
+import { CreatorComponent } from './components/creator/creator.component';
 
 @NgModule({
     imports: [CommonModule, FormsModule],
@@ -17,6 +18,7 @@ import { CheckboxComponent } from '@/app/components/checkbox/checkbox.component'
         ListComponent,
         ViewComponent,
         ButtonComponent,
+        CreatorComponent,
         ListItemComponent,
         ViewItemComponent,
         ChecklistComponent,

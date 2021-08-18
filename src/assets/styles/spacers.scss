@@ -44,6 +44,10 @@
         margin-bottom: 0;
     }
 
+    &--auto {
+        margin-bottom: auto;
+    }
+
     &--no-important {
         margin-bottom: 0 !important;
     }
@@ -93,6 +97,10 @@
 
     &--no {
         margin-top: 0;
+    }
+
+    &--auto {
+        margin-top: auto;
     }
 
     &--no-important {
@@ -146,6 +154,10 @@
         margin-left: 0;
     }
 
+    &--auto {
+        margin-left: auto;
+    }
+
     &--no-important {
         margin-left: 0 !important;
     }
@@ -195,6 +207,10 @@
 
     &--no {
         margin-right: 0;
+    }
+
+    &--auto {
+        margin-right: auto;
     }
 
     &--no-important {

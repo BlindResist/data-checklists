@@ -8,7 +8,12 @@
         flex-flow: row nowrap;
         align-items: center;
         justify-content: flex-start;
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 3rem;
+        position: relative;
+    }
+
+    &__checkbox {
+        margin-left: -2rem;
     }
 
     &__caption {
@@ -22,7 +27,7 @@
     }
 
     &__body {
-        padding: 1rem;
+        padding: 1rem 1rem 1rem 4rem;
     }
 
     &--done {

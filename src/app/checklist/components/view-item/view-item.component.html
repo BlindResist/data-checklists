@@ -6,6 +6,7 @@
         <app-checkbox
             [checked]="done"
             [name]="checkboxID"
+            class="view-item__checkbox"
             (onChange)="checkedHandler($event)"
         ></app-checkbox>
         <span class="view-item__caption">{{ name }}</span>
