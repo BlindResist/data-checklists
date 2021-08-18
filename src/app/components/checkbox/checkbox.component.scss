@@ -1,0 +1,23 @@
+@import 'common';
+
+.app-checkbox {
+    $parent: &;
+
+    input {
+        display: none;
+
+        &:checked + #{$parent}__box {}
+    }
+
+    &__box {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.25rem;
+        border-radius: 4px;
+        box-shadow: 0 0 0 1px rgba($black, .25);
+    }
+}

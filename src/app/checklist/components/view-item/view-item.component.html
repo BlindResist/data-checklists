@@ -1,10 +1,18 @@
-<div class="view-item">
-    <div
-        (click)="toggleBody()"
-        class="view-item__header"
-    >
+<div
+    class="view-item"
+    [ngClass]="{'view-item--done': done}"
+>
+    <div class="view-item__header">
+        <app-checkbox
+            [checked]="done"
+            [name]="checkboxID"
+            (onChange)="checkedHandler($event)"
+        ></app-checkbox>
         <span class="view-item__caption">{{ name }}</span>
-        <app-button>show details</app-button>
+        <app-button
+            (click)="toggleBody()"
+            class="view-item__show"
+        >show details</app-button>
     </div>
     <div
         *ngIf="bodyVisible"

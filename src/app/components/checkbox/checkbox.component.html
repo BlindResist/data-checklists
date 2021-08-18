@@ -1,0 +1,15 @@
+<label
+    [for]="name"
+    class="app-checkbox"
+>
+    <input
+        [id]="name"
+        type="checkbox"
+        [(ngModel)]="checked"
+        (ngModelChange)="changeHandler()"
+    />
+    <span
+        class="app-checkbox__box icon"
+        [ngClass]="{'icon-checkmark': checked}"
+    ></span>
+</label>

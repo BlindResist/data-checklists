@@ -1,9 +1,10 @@
 <div class="checklist">
     <app-list
         [data]="data"
-        (open)="openView($event)"
+        (open)="openListItemView($event)"
     ></app-list>
     <app-view
         [data]="data"
+        (done)="changeViewItemStatus($event)"
     ></app-view>
 </div>

@@ -1,7 +1,10 @@
 <div class="view">
     <app-view-item
+        [id]="item.id"
         [name]="item.name"
+        [done]="item.done"
         [details]="item.details"
+        (onDone)="doneItem($event)"
         *ngFor="let item of selectedItem"
     ></app-view-item>
 </div>

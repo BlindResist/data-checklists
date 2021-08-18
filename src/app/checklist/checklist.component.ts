@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChecklistService } from '@/app/checklist/services/checklist.service';
-import { IChecklistData, IChecklistView } from '@/app/checklist/models/checklist.model';
+import { IChecklistData, IViewItemStatus } from '@/app/checklist/models/checklist.model';
 
 @Component({
     selector: 'app-checklist',
@@ -20,7 +20,11 @@ export class ChecklistComponent implements OnInit {
         this.data = this.checklistService.getData()
     }
 
-    openView(item: IChecklistData): void {
-        this.checklistService.changeData(item.id)
+    openListItemView(id: number): void {
+        this.checklistService.changeActiveListItem(id)
+    }
+
+    changeViewItemStatus(obj: IViewItemStatus): void {
+        this.checklistService.changeViewItemStatus(obj)
     }
 }

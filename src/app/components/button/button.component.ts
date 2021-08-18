@@ -9,7 +9,7 @@ export class ButtonComponent {
     @Input() public type: string = 'submit'
     @Input() public modifier: string = ''
 
-    @Output() public onClick = new EventEmitter()
+    @Output() public onClick: EventEmitter<void> = new EventEmitter()
 
     get classObject(): {[el: string]: boolean} {
         return {

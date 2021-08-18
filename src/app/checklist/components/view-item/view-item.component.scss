@@ -7,15 +7,25 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 1rem;
     }
 
     &__caption {
+        display: block;
+        margin-left: 1rem;
         font-size: 1rem;
+    }
+
+    &__show {
+        margin-left: auto;
     }
 
     &__body {
         padding: 1rem;
+    }
+
+    &--done {
+        opacity: .5;
     }
 }

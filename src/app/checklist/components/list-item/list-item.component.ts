@@ -10,9 +10,9 @@ export class ListItemComponent {
     @Input() public index!: number
     @Input() public data!: IChecklistData
 
-    @Output() onClick = new EventEmitter()
+    @Output() onClick: EventEmitter<number> = new EventEmitter()
 
     clickHandler(): void {
-        this.onClick.emit(this.data)
+        this.onClick.emit(this.data.id)
     }
 }
