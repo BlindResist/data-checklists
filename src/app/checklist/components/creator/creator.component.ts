@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { IChecklistData } from "@/app/checklist/models/checklist.model";
 
 @Component({
     selector: 'app-creator',
@@ -7,9 +6,22 @@ import { IChecklistData } from "@/app/checklist/models/checklist.model";
     styleUrls: ['./creator.component.scss']
 })
 export class CreatorComponent {
-    @Output() create: EventEmitter<IChecklistData> = new EventEmitter()
+    @Output() onCreate: EventEmitter<string> = new EventEmitter()
 
-    addNewListItem(): void {
-        this.create.emit()
+    public value: string = ''
+    public inited: boolean = false
+
+    addNewItem(): void {
+        this.onCreate.emit(this.value)
+        this.cancelNewItem()
+    }
+
+    initNewItem(): void {
+        this.inited = true
+    }
+
+    cancelNewItem(): void {
+        this.value = ''
+        this.inited = false
     }
 }

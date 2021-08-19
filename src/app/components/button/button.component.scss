@@ -19,4 +19,12 @@
     &:hover {
         outline: 0 none;
     }
+
+    &--accept {
+        background-color: $green;
+    }
+
+    &--cancel {
+        background-color: $red;
+    }
 }

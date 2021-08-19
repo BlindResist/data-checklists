@@ -59,8 +59,23 @@ export class ChecklistService {
         return this.data
     }
 
-    addNewListItem(item: IChecklistData): void {
-        this.data.push(item)
+    addNewListItem(name: string): void {
+        const newItem: IChecklistData = this.buildNewListItem(name)
+
+        this.data.push(newItem)
+        this.changeActiveListItem(newItem.id)
+    }
+
+    buildNewListItem(name: string): IChecklistData {
+        const id: number = Math.floor(Date.now() / 1000)
+
+        return {
+            id,
+            name,
+            items: [],
+            archive: false,
+            selected: false
+        }
     }
 
     changeActiveListItem(id: number): void {

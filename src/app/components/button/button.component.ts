@@ -13,9 +13,11 @@ export class ButtonComponent {
 
     get classObject(): {[el: string]: boolean} {
         return {
-            'app-button--primary': this.modifier === 'primary',
+            'app-button--third': this.modifier === 'third',
+            'app-button--accept': this.modifier === 'accept',
+            'app-button--cancel': this.modifier === 'cancel',
             'app-button--second': this.modifier === 'second',
-            'app-button--third': this.modifier === 'third'
+            'app-button--primary': this.modifier === 'primary'
         }
     }
 

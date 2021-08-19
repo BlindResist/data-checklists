@@ -9,7 +9,7 @@ import { IChecklistData, IChecklistView, IViewItemStatus } from '@/app/checklist
 export class ViewComponent {
     @Input() data!: IChecklistData[]
 
-    @Output() done: EventEmitter<IViewItemStatus> = new EventEmitter()
+    @Output() onDone: EventEmitter<IViewItemStatus> = new EventEmitter()
 
     get selectedItem(): IChecklistView[] {
         return this.filteredData.length ? this.filteredData[0].items : []
@@ -20,6 +20,6 @@ export class ViewComponent {
     }
 
     doneItem(obj: IViewItemStatus): void {
-        this.done.emit(obj)
+        this.onDone.emit(obj)
     }
 }

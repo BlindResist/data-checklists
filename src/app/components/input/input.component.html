@@ -1,0 +1,13 @@
+<label
+    [for]="name"
+    class="app-input"
+>
+    <input
+        #input
+        [type]="type"
+        [value]="value"
+        [(ngModel)]="value"
+        [placeholder]="placeholder"
+        (ngModelChange)="changeHandler()"
+    />
+</label>

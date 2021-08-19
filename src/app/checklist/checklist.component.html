@@ -1,10 +1,11 @@
 <div class="checklist">
     <app-list
         [data]="data"
-        (open)="openListItemView($event)"
+        (onCreate)="addNewListItem($event)"
+        (onOpen)="openListItemView($event)"
     ></app-list>
     <app-view
         [data]="data"
-        (done)="changeViewItemStatus($event)"
+        (onDone)="changeViewItemStatus($event)"
     ></app-view>
 </div>

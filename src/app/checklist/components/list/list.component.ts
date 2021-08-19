@@ -9,9 +9,14 @@ import { IChecklistData } from '@/app/checklist/models/checklist.model';
 export class ListComponent {
     @Input() data: IChecklistData[] = []
 
-    @Output() open: EventEmitter<number> = new EventEmitter()
+    @Output() onOpen: EventEmitter<number> = new EventEmitter()
+    @Output() onCreate: EventEmitter<string> = new EventEmitter()
 
     openItem(id: number): void {
-        this.open.emit(id)
+        this.onOpen.emit(id)
+    }
+
+    createNewItem(name: string): void {
+        this.onCreate.emit(name)
     }
 }

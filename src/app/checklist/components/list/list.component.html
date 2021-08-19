@@ -5,5 +5,7 @@
         (onClick)="openItem($event)"
         *ngFor="let item of data; let index = index"
     ></app-list-item>
-    <app-creator class="list__creator margin-top--xsm"></app-creator>
+    <app-creator
+        (onCreate)="createNewItem($event)"
+    ></app-creator>
 </div>

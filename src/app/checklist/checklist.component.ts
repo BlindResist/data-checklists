@@ -17,6 +17,10 @@ export class ChecklistComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
+        this.getData()
+    }
+
+    getData(): void {
         this.data = this.checklistService.getData()
     }
 
@@ -26,5 +30,10 @@ export class ChecklistComponent implements OnInit {
 
     changeViewItemStatus(obj: IViewItemStatus): void {
         this.checklistService.changeViewItemStatus(obj)
+    }
+
+    addNewListItem(name: string): void {
+        this.checklistService.addNewListItem(name)
+        this.getData()
     }
 }

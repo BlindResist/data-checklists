@@ -1,0 +1,13 @@
+.app-input {
+
+    input {
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+
+        &:focus,
+        &:hover {
+            outline: 0 none;
+        }
+    }
+}
