@@ -1,7 +1,7 @@
 <div class="list-item-creator">
     <div
         *ngIf="inited"
-        class="list-item-creator__new-item"
+        class="list-item-creator__editor"
     >
         <app-input
             [focused]="true"
@@ -14,11 +14,15 @@
         <app-button
             modifier="accept"
             (onClick)="addNewItem()"
-        >ok</app-button>
+        >
+            <span class="icon icon-plus"></span>
+        </app-button>
         <app-button
             modifier="cancel"
             (onClick)="cancelNewItem()"
-        >x</app-button>
+        >
+            <span class="icon icon-cross"></span>
+        </app-button>
     </div>
     <app-button
         *ngIf="!inited"

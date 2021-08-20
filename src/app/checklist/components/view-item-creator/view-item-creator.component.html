@@ -1,4 +1,31 @@
 <div class="view-item-creator">
+    <div
+        *ngIf="inited"
+        class="view-item-creator__editor"
+    >
+        <div class="view-item-creator__header">
+            <app-input
+                [focused]="true"
+                name="view-item"
+                ngDefaultControl
+                [(ngModel)]="value"
+                placeholder="Enter name"
+                class="view-item-creator__input"
+            ></app-input>
+            <app-button
+                modifier="accept"
+                (onClick)="addNewItem()"
+            >
+                <span class="icon icon-plus"></span>
+            </app-button>
+            <app-button
+                modifier="cancel"
+                (onClick)="cancelNewItem()"
+            >
+                <span class="icon icon-cross"></span>
+            </app-button>
+        </div>
+    </div>
     <app-button
         *ngIf="!inited"
         modifier="accept"
