@@ -1,15 +1,16 @@
 $white: #fff;
 $black: #212121;
-$blue-dark: #404b68;
 
 $green: #9fe218;
 $green-dark: #96d418;
-$gray-lite: #eef0f5;
+$green-lite: #bbea5d;
+$gray: #f5f6f8;
 $gray-dark: #2E3033;
 $red: #f73656;
-$red-dark: #ec1c4f;
+$red-lite: #f97288;
 $yellow: #ffe17f;
 $yellow-dark: #ffd54c;
+$blue-dark: #404b68;
 $blue-lite: #009ddc;
 
 $breakpoint-desktop: 1921px;
@@ -19,6 +20,3 @@ $breakpoint-v-tablet: 1023px;
 $breakpoint-mobile: 599px;
 
 $transition: .3s ease-in-out;
-
-$neumorphism-bg: #f5f6f8;
-$neumorphism-shadow: 20px 20px 60px #d0d1d3, -20px -20px 60px #ffffff;

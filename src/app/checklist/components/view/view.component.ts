@@ -10,16 +10,25 @@ export class ViewComponent {
     @Input() data!: IChecklistData[]
 
     @Output() onDone: EventEmitter<IViewItemStatus> = new EventEmitter()
+    @Output() onCreate: EventEmitter<string> = new EventEmitter()
 
-    get selectedItem(): IChecklistView[] {
+    public get empty(): boolean {
+        return this.selectedItem.length < 1
+    }
+
+    public get selectedItem(): IChecklistView[] {
         return this.filteredData.length ? this.filteredData[0].items : []
     }
 
-    get filteredData(): IChecklistData[] | [] {
+    public get filteredData(): IChecklistData[] | [] {
         return this.data.filter((item: IChecklistData) => item.selected)
     }
 
     doneItem(obj: IViewItemStatus): void {
         this.onDone.emit(obj)
+    }
+
+    createNewItem(name: string): void {
+        this.onCreate.emit(name)
     }
 }

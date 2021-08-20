@@ -1,11 +1,12 @@
 <div class="list">
+    <app-empty *ngIf="empty"></app-empty>
     <app-list-item
         [data]="item"
         [index]="index + 1"
         (onClick)="openItem($event)"
         *ngFor="let item of data; let index = index"
     ></app-list-item>
-    <app-creator
+    <app-list-item-creator
         (onCreate)="createNewItem($event)"
-    ></app-creator>
+    ></app-list-item-creator>
 </div>

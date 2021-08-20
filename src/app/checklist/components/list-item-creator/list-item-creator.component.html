@@ -1,15 +1,15 @@
-<div class="creator">
+<div class="list-item-creator">
     <div
         *ngIf="inited"
-        class="creator__new-item"
+        class="list-item-creator__new-item"
     >
         <app-input
             [focused]="true"
             name="list-item"
             ngDefaultControl
             [(ngModel)]="value"
-            class="creator__input"
             placeholder="Enter name"
+            class="list-item-creator__input"
         ></app-input>
         <app-button
             modifier="accept"
@@ -20,12 +20,13 @@
             (onClick)="cancelNewItem()"
         >x</app-button>
     </div>
-    <button
+    <app-button
         *ngIf="!inited"
-        class="creator__init"
+        modifier="accept"
         (click)="initNewItem()"
+        class="margin-top--xs"
     >
         <span class="icon icon-plus"></span>
-        <span class="creator__init-text margin-left--xxs">Create new</span>
-    </button>
+        <span class="margin-left--xxs">new list</span>
+    </app-button>
 </div>

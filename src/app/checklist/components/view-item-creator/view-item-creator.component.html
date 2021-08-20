@@ -1,0 +1,11 @@
+<div class="view-item-creator">
+    <app-button
+        *ngIf="!inited"
+        modifier="accept"
+        (click)="initNewItem()"
+        class="margin-top--xs"
+    >
+        <span class="icon icon-plus"></span>
+        <span class="margin-left--xxs">new item</span>
+    </app-button>
+</div>

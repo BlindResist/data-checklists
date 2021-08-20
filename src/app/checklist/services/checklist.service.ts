@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IChecklistData, IViewItemStatus } from '@/app/checklist/models/checklist.model';
+import { IChecklistData, IChecklistView, IViewItemStatus } from '@/app/checklist/models/checklist.model';
 
 @Injectable({
     providedIn: 'root'
@@ -96,4 +96,6 @@ export class ChecklistService {
             }
         }
     }
+
+    addNewViewItem(id: number, obj: IChecklistView): void {}
 }

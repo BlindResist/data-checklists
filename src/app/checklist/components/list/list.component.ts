@@ -12,6 +12,10 @@ export class ListComponent {
     @Output() onOpen: EventEmitter<number> = new EventEmitter()
     @Output() onCreate: EventEmitter<string> = new EventEmitter()
 
+    public get empty(): boolean {
+        return this.data.length < 1
+    }
+
     openItem(id: number): void {
         this.onOpen.emit(id)
     }

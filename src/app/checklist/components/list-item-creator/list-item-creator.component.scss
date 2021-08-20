@@ -1,0 +1,23 @@
+@import 'common';
+
+:host {
+    display: block;
+}
+
+.list-item-creator {
+    text-align: center;
+
+    &__new-item {
+        display: flex;
+        align-items: center;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: rgba($black, .05);
+    }
+
+    &__input {
+        flex-grow: 1;
+    }
+}

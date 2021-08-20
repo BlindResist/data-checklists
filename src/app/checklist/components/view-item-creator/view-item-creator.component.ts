@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { ICreator } from '@/app/checklist/models/checklist.model';
 
 @Component({
-    selector: 'app-creator',
-    templateUrl: './creator.component.html',
-    styleUrls: ['./creator.component.scss']
+    selector: 'app-view-item-creator',
+    templateUrl: './view-item-creator.component.html',
+    styleUrls: ['./view-item-creator.component.scss']
 })
-export class CreatorComponent {
+export class ViewItemCreatorComponent implements ICreator {
     @Output() onCreate: EventEmitter<string> = new EventEmitter()
 
     public value: string = ''

@@ -18,3 +18,11 @@ export interface IViewItemStatus {
     id: number,
     checked: boolean
 }
+
+export interface ICreator {
+    value: string,
+    inited: boolean,
+    addNewItem(): void,
+    initNewItem(): void,
+    cancelNewItem(): void
+}
